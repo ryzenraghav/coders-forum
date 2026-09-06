@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 import { Code, Briefcase, MessageSquare, ChevronRight, User } from 'lucide-react';
 
 const TEAM_DATA = [
-  { id: 1, name: 'Alex Mercer', role: 'Chief Mentor', team: 'Chief Mentors', avatar: '/images/avatar.jpg', desc: 'Oversees the entire mentorship program and curriculum design.' },
-  { id: 2, name: 'Sarah Chen', role: 'Chief Mentor', team: 'Chief Mentors', avatar: '/images/avatar.jpg', desc: 'Focuses on advanced DSA problem solving and competitive programming.' },
-  { id: 3, name: 'Marcus Johnson', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Specializes in Core Java and object-oriented design.' },
-  { id: 4, name: 'Priya Patel', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Guides students through basic algorithms and data structures.' },
-  { id: 5, name: 'David Kim', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Machine Learning enthusiast, helps with predictive modeling.' },
-  { id: 6, name: 'Elena Rodriguez', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Expert in dynamic programming and recursion techniques.' },
-  { id: 7, name: 'James Wilson', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Helps 2nd-year students transition from theory to practical implementation.' },
+  { id: 1, name: 'Mubashir Sheriff', role: 'Chief Mentor', team: 'Chief Mentors', avatar: '/images/c15.png', desc: 'Oversees the entire mentorship program and curriculum design.' },
+  { id: 2, name: 'Sri Ananya I', role: 'Chief Mentor', team: 'Chief Mentors', avatar: '/images/sm96.jpg', desc: 'Focuses on advanced DSA problem solving and competitive programming.' },
+  { id: 3, name: 'Tharun Vel K', role: 'Mentor', team: 'Mentors', avatar: '/images/m62.jpg', desc: 'Specializes in Core Java and object-oriented design.' },
+  { id: 4, name: 'Sitharth', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Guides students through basic algorithms and data structures.' },
+  { id: 5, name: 'Manibalan', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Machine Learning enthusiast, helps with predictive modeling.' },
+  //{ id: 6, name: 'Elena Rodriguez', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Expert in dynamic programming and recursion techniques.' },
+  //{ id: 7, name: 'James Wilson', role: 'Mentor', team: 'Mentors', avatar: '/images/avatar.jpg', desc: 'Helps 2nd-year students transition from theory to practical implementation.' },
 ];
 
 const TEAMS = ['Chief Mentors', 'Mentors'];
@@ -59,7 +59,11 @@ const Team = () => {
       {/* Team Grid */}
       <section className="py-20 min-h-[50vh]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className={`grid gap-8 ${
+            activeTeam === 'Chief Mentors' 
+              ? 'grid-cols-1 md:grid-cols-2 max-w-4xl mx-auto' 
+              : 'grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5'
+          }`}>
             {filteredMembers.map((member, i) => (
               <motion.div 
                 key={member.id}
@@ -97,13 +101,13 @@ const Team = () => {
                     
                     {/* Socials */}
                     <div className="flex justify-center gap-3 pt-4 border-t border-primary/20">
-                      <a href="#" className="w-8 h-8 flex items-center justify-center bg-background border border-primary/30 text-textMuted hover:text-white hover:border-primary transition-colors">
+                      <a href="#" className="w-8 h-8 flex items-center justify-center bg-background border border-primary/30 text-textMuted hover:text-white hover:border-primary transition-colors" aria-label="GitHub">
                         <Code className="w-4 h-4" />
                       </a>
-                      <a href="#" className="w-8 h-8 flex items-center justify-center bg-background border border-primary/30 text-textMuted hover:text-white hover:border-secondary transition-colors">
+                      <a href="#" className="w-8 h-8 flex items-center justify-center bg-background border border-primary/30 text-textMuted hover:text-white hover:border-secondary transition-colors" aria-label="LinkedIn">
                         <Briefcase className="w-4 h-4" />
                       </a>
-                      <a href="#" className="w-8 h-8 flex items-center justify-center bg-background border border-primary/30 text-textMuted hover:text-white hover:border-primary transition-colors">
+                      <a href="#" className="w-8 h-8 flex items-center justify-center bg-background border border-primary/30 text-textMuted hover:text-white hover:border-primary transition-colors" aria-label="Contact">
                         <MessageSquare className="w-4 h-4" />
                       </a>
                     </div>

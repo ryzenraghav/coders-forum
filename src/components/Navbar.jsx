@@ -31,7 +31,7 @@ const Navbar = () => {
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center gap-3 group">
               <div className="w-10 h-10 pixel-border bg-surface flex items-center justify-center p-1 group-hover:bg-primary/20 transition-colors">
-                <img src="/images/new-logo.png" alt="Logo" className="w-full h-full object-contain" onError={(e) => { e.target.src = '/vite.svg'; }} />
+                <img src="/images/CoderForum.webp" alt="Logo" className="w-full h-full object-contain" onError={(e) => { e.target.src = '/vite.svg'; }} />
               </div>
               <div className="flex flex-col">
                 <span className="text-xs font-mono text-secondary tracking-widest leading-none">FORESE SVCE</span>

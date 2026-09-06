@@ -115,35 +115,38 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Events */}
+      {/* Upcoming Events */}
       <section className="py-24 bg-surface/50 border-t border-primary/20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-12">
             <div>
               <div className="font-mono text-secondary mb-2">[ LATEST LOGS ]</div>
-              <h2 className="text-4xl font-bold">FEATURED EVENTS</h2>
+              <h2 className="text-4xl font-bold">UPCOMING EVENTS</h2>
             </div>
             <Link to="/events" className="hidden md:inline-flex items-center text-primary hover:text-white font-mono text-sm uppercase transition-colors">
               VIEW ALL <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((item) => (
-              <div key={item} className="pixel-border bg-background group overflow-hidden flex flex-col">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              { name: 'Coders Forum Hackathon', tag: 'HACKATHON', date: 'To Be Announced', desc: 'A 24-hour coding marathon to build solutions for a sustainable future.' },
+              { name: 'Mini Hackathon', tag: 'HACKATHON', date: 'To Be Announced', desc: 'A shorter, intense coding challenge to test your skills and creativity.' }
+            ].map((event, i) => (
+              <div key={i} className="pixel-border bg-background group overflow-hidden flex flex-col">
                 <div className="h-48 relative overflow-hidden bg-surface">
                   <div className="absolute inset-0 opacity-80 bg-[url('/images/campus.jpg')] bg-cover bg-center group-hover:scale-105 transition-transform duration-700"></div>
                   <div className="absolute inset-0 bg-primary/20 mix-blend-overlay group-hover:bg-transparent transition-colors"></div>
                   <div className="absolute top-4 left-4 z-10 px-2 py-1 bg-background/80 text-primary border border-primary/50 text-[10px] font-mono backdrop-blur-sm">
-                    HACKATHON
+                    {event.tag}
                   </div>
                 </div>
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-textMuted text-xs font-mono">OCT 12, 2026</span>
+                    <span className="text-textMuted text-xs font-mono">{event.date}</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">HackOverflow 4.0</h3>
-                  <p className="text-textMuted text-sm font-mono mb-6 flex-grow">A 24-hour coding marathon to build solutions for a sustainable future.</p>
+                  <h3 className="text-xl font-bold mb-2 group-hover:text-secondary transition-colors">{event.name}</h3>
+                  <p className="text-textMuted text-sm font-mono mb-6 flex-grow">{event.desc}</p>
                   <Link to="/events" className="text-sm font-mono text-white flex items-center hover:text-primary transition-colors mt-auto">
                     READ LOG <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>

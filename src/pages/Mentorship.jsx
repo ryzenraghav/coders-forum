@@ -2,12 +2,6 @@ import { motion } from 'framer-motion';
 import { Terminal, Database, GitBranch, Code2, Users, Target, Award, ArrowRight, BrainCircuit, PlayCircle, Code, Briefcase, Cpu } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const MENTORS = [
-  { id: 1, name: 'Alex Mercer', year: '3rd Year / CSE', expertise: 'Data Structures & Java', intro: 'Passionate about algorithms and competitive coding.', avatar: '/images/avatar.jpg' },
-  { id: 2, name: 'Sarah Chen', year: '3rd Year / IT', expertise: 'Algorithms & Logic', intro: 'Loves breaking down complex problems into simple steps.', avatar: '/images/avatar.jpg' },
-  { id: 3, name: 'Marcus Johnson', year: '4th Year / CSE', expertise: 'System Design & Java', intro: 'Here to help you write cleaner, more efficient code.', avatar: '/images/avatar.jpg' },
-];
-
 const Mentorship = () => {
   return (
     <div className="w-full">
@@ -202,48 +196,6 @@ const Mentorship = () => {
                 <PlayCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                 <span>{outcome}</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Mentors Section */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">MEET YOUR MENTORS</h2>
-            <div className="font-mono text-secondary text-sm">[ EXPERT POOL ]</div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {MENTORS.map((mentor) => (
-              <motion.div 
-                key={mentor.id}
-                whileHover={{ y: -5 }}
-                className="pixel-border bg-surface group transition-all duration-300 hover:shadow-[0_0_20px_rgba(176,38,255,0.15)] flex flex-col"
-              >
-                <div className="h-48 relative overflow-hidden bg-background border-b border-primary/30 p-2">
-                  <img 
-                    src={mentor.avatar} 
-                    alt={mentor.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 pixelated" 
-                  />
-                  <div className="absolute inset-0 bg-primary/20 mix-blend-color group-hover:opacity-0 transition-opacity"></div>
-                </div>
-                
-                <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">{mentor.name}</h3>
-                  <div className="font-mono text-xs text-secondary mb-3">{mentor.year}</div>
-                  
-                  <div className="inline-block px-2 py-1 bg-primary/10 text-primary text-[10px] font-mono mb-4 w-fit border border-primary/20">
-                    {mentor.expertise.toUpperCase()}
-                  </div>
-                  
-                  <p className="text-textMuted text-sm font-mono mt-auto pt-4 border-t border-primary/10 italic">
-                    "{mentor.intro}"
-                  </p>
-                </div>
-              </motion.div>
             ))}
           </div>
         </div>
