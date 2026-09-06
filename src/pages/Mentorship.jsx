@@ -6,26 +6,26 @@ const Mentorship = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 border-b border-primary/30 bg-surface/30 overflow-hidden">
+      <section className="relative pt-20 md:pt-32 pb-16 md:pb-24 border-b border-primary/30 bg-surface/30 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10 bg-[url('/images/campus.jpg')] bg-cover bg-center bg-fixed"></div>
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/10 to-transparent pointer-events-none"></div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
-            <div className="font-mono text-secondary mb-4 tracking-widest text-sm">[ CODERS' FORUM • MENTORSHIP PROGRAM ]</div>
-            <h1 className="text-5xl md:text-6xl font-black mb-6 leading-tight text-white">
+            <div className="font-mono text-secondary mb-3 md:mb-4 tracking-widest text-[10px] md:text-sm">[ CODERS' FORUM • MENTORSHIP PROGRAM ]</div>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-tight text-white">
               Level Up Your <br/>Coding Journey.
             </h1>
-            <p className="text-xl text-primary font-mono mb-4">
+            <p className="text-base md:text-xl text-primary font-mono mb-3 md:mb-4">
               Learn. Solve. Build.
             </p>
-            <p className="text-textMuted font-mono mb-10 max-w-lg">
+            <p className="text-textMuted font-mono mb-6 md:mb-10 max-w-lg text-sm md:text-base">
               A mentorship program where experienced pre-final-year student mentors help 2nd-year students build a strong foundation in programming, DSA, Java, and Machine Learning.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="GOOGLE_FORM_URL_HERE" target="_blank" rel="noopener noreferrer" className="btn-pixel text-center w-full sm:w-auto">Join the Program</a>
-              <Link to="/curriculum" className="btn-pixel-secondary text-center w-full sm:w-auto">Explore Curriculum</Link>
+
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <a href="GOOGLE_FORM_URL_HERE" target="_blank" rel="noopener noreferrer" className="btn-pixel text-center w-full sm:w-auto py-3 px-6 text-sm">Join the Program</a>
+              <Link to="/curriculum" className="btn-pixel-secondary text-center w-full sm:w-auto py-3 px-6 text-sm">Explore Curriculum</Link>
             </div>
           </div>
           
@@ -65,43 +65,43 @@ const Mentorship = () => {
       </section>
 
       {/* Program Overview */}
-      <section className="py-24 border-b border-primary/10">
+      <section className="py-16 md:py-24 border-b border-primary/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Terminal className="w-12 h-12 text-primary mx-auto mb-6 opacity-50" />
-          <h2 className="text-3xl font-bold mb-8">PROGRAM OVERVIEW</h2>
-          <p className="text-lg text-textMuted font-mono leading-relaxed">
-            Our <strong className="text-white">Student Mentors</strong> will guide participants through essential programming concepts. 
-            This curriculum is meticulously designed to bridge the gap between classroom theory and practical application, 
+          <Terminal className="w-10 h-10 md:w-12 md:h-12 text-primary mx-auto mb-4 md:mb-6 opacity-50" />
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-8">PROGRAM OVERVIEW</h2>
+          <p className="text-sm md:text-lg text-textMuted font-mono leading-relaxed px-2">
+            Our <strong className="text-white">Student Mentors</strong> will guide participants through essential programming concepts.
+            This curriculum is meticulously designed to bridge the gap between classroom theory and practical application,
             equipping you with the exact skills required for academics, personal projects, competitive programming, and upcoming placements.
           </p>
         </div>
       </section>
 
       {/* What You'll Learn */}
-      <section className="py-24 bg-surface/20">
+      <section className="py-16 md:py-24 bg-surface/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">WHAT YOU'LL LEARN</h2>
-            <div className="font-mono text-secondary text-sm">[ CORE CURRICULUM ]</div>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">WHAT YOU'LL LEARN</h2>
+            <div className="font-mono text-secondary text-xs md:text-sm">[ CORE CURRICULUM ]</div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {[
               { title: 'Data Structures', desc: 'Arrays, linked lists, stacks, trees, graphs, and fundamental data-structure concepts.', icon: Database },
               { title: 'Algorithms', desc: 'Searching, sorting, recursion, complexity analysis, and problem-solving techniques.', icon: GitBranch },
               { title: 'Java', desc: 'Programming fundamentals, OOP concepts, syntax, implementation, and structuring code.', icon: Code2 },
               { title: 'Machine Learning', desc: 'Data preprocessing, model training, evaluation, and building predictive AI models.', icon: Cpu }
             ].map((module, i) => (
-              <motion.div 
+              <motion.div
                 key={i}
                 whileHover={{ y: -5 }}
-                className="pixel-border bg-surface p-8 group transition-all duration-300 hover:border-secondary flex flex-col"
+                className="pixel-border bg-surface p-5 md:p-8 group transition-all duration-300 hover:border-secondary flex flex-col"
               >
-                <div className="w-14 h-14 mb-6 flex items-center justify-center bg-primary/10 border border-primary/30 group-hover:bg-secondary/10 group-hover:border-secondary/30 transition-colors">
-                  <module.icon className="w-7 h-7 text-primary group-hover:text-secondary transition-colors" />
+                <div className="w-12 h-12 md:w-14 md:h-14 mb-4 md:mb-6 flex items-center justify-center bg-primary/10 border border-primary/30 group-hover:bg-secondary/10 group-hover:border-secondary/30 transition-colors">
+                  <module.icon className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:text-secondary transition-colors" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-secondary transition-colors">{module.title}</h3>
-                <p className="text-textMuted font-mono text-sm leading-relaxed flex-grow">{module.desc}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4 text-white group-hover:text-secondary transition-colors">{module.title}</h3>
+                <p className="text-textMuted font-mono text-xs md:text-sm leading-relaxed flex-grow">{module.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -109,27 +109,27 @@ const Mentorship = () => {
       </section>
 
       {/* Why Join? */}
-      <section className="py-24 border-y border-primary/20 relative">
+      <section className="py-16 md:py-24 border-y border-primary/20 relative">
         <div className="absolute right-0 top-0 w-1/3 h-full bg-[radial-gradient(ellipse_at_center,rgba(0,240,255,0.05),transparent_70%)] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-12">WHY JOIN?</h2>
-              <div className="space-y-8">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-8 md:mb-12">WHY JOIN?</h2>
+              <div className="space-y-6 md:space-y-8">
                 {[
                   { title: 'Learn from experienced mentors', desc: 'Get guidance from pre-final-year students who have already navigated the learning path.', icon: Users },
                   { title: 'Hands-on coding', desc: 'Apply concepts through problems, exercises, and interactive sessions.', icon: Code },
                   { title: 'Build problem-solving skills', desc: 'Learn how to break down problems and approach them logically.', icon: BrainCircuit },
-                  { title: 'Prepare for what’s ahead', desc: 'Develop foundations useful for projects, competitive programming, and placements.', icon: Briefcase },
+                  { title: 'Prepare for what\'s ahead', desc: 'Develop foundations useful for projects, competitive programming, and placements.', icon: Briefcase },
                   { title: 'Earn PCD Hours', desc: 'Participation in the program contributes toward PCD hours.', icon: Award }
                 ].map((benefit, i) => (
-                  <div key={i} className="flex gap-4 items-start">
+                  <div key={i} className="flex gap-3 md:gap-4 items-start">
                     <div className="mt-1">
-                      <benefit.icon className="w-6 h-6 text-primary" />
+                      <benefit.icon className="w-5 h-5 md:w-6 md:h-6 text-primary" />
                     </div>
                     <div>
-                      <h4 className="text-lg font-bold text-white mb-1">{benefit.title}</h4>
-                      <p className="text-textMuted font-mono text-sm">{benefit.desc}</p>
+                      <h4 className="text-base md:text-lg font-bold text-white mb-1">{benefit.title}</h4>
+                      <p className="text-textMuted font-mono text-xs md:text-sm">{benefit.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -150,28 +150,29 @@ const Mentorship = () => {
       </section>
 
       {/* Learning Journey */}
-      <section className="py-24 bg-background">
+      <section className="py-16 md:py-24 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4">LEARNING JOURNEY</h2>
-            <div className="font-mono text-textMuted text-sm">Follow the protocol.</div>
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">LEARNING JOURNEY</h2>
+            <div className="font-mono text-textMuted text-xs md:text-sm">Follow the protocol.</div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 relative">
             <div className="hidden md:block absolute top-12 left-12 right-12 h-px bg-primary/30 -z-10"></div>
-            
+            <div className="md:hidden absolute left-6 top-0 bottom-0 w-px bg-primary/30 -z-10"></div>
+
             {[
               { step: '01', title: 'Learn', desc: 'Understand programming, DSA, and ML fundamentals.' },
               { step: '02', title: 'Practice', desc: 'Solve problems and implement concepts through hands-on sessions.' },
               { step: '03', title: 'Apply', desc: 'Use your knowledge in projects and coding challenges.' },
               { step: '04', title: 'Prepare', desc: 'Build confidence for competitive programming, academics, and placements.' }
             ].map((item, i) => (
-              <div key={i} className="relative group text-center md:text-left">
-                <div className="w-24 h-24 mx-auto md:mx-0 mb-6 pixel-border bg-background flex items-center justify-center font-mono text-3xl text-primary group-hover:text-secondary transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]">
+              <div key={i} className="relative group text-center md:text-left md:pl-0">
+                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto md:mx-0 mb-4 md:mb-6 pixel-border bg-background flex items-center justify-center font-mono text-2xl md:text-3xl text-primary group-hover:text-secondary transition-colors shadow-[0_0_15px_rgba(0,0,0,0.5)]">
                   {item.step}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>
-                <p className="text-textMuted text-sm font-mono">{item.desc}</p>
+                <h3 className="text-lg md:text-xl font-bold mb-2 md:mb-3 text-white">{item.title}</h3>
+                <p className="text-textMuted text-xs md:text-sm font-mono">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -179,12 +180,12 @@ const Mentorship = () => {
       </section>
 
       {/* What You'll Gain */}
-      <section className="py-24 bg-surface/30 border-y border-primary/20">
+      <section className="py-16 md:py-24 bg-surface/30 border-y border-primary/20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">Think better. Solve better. Code better.</h2>
-          <p className="text-textMuted font-mono mb-12">By the end of the program, students should be able to:</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left font-mono text-sm text-textMain/90">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 text-white px-2">Think better. Solve better. Code better.</h2>
+          <p className="text-textMuted font-mono mb-8 md:mb-12 text-sm md:text-base">By the end of the program, students should be able to:</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-left font-mono text-xs md:text-sm text-textMain/90">
             {[
               'Understand and apply fundamental DSA, Java, and Machine Learning concepts',
               'Approach coding problems with stronger logic',
@@ -192,8 +193,8 @@ const Mentorship = () => {
               'Tackle academic and placement-oriented coding problems with confidence',
               'Continue building their programming skills independently'
             ].map((outcome, i) => (
-              <div key={i} className="flex items-start gap-3 p-4 bg-surface/50 border border-primary/10">
-                <PlayCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+              <div key={i} className="flex items-start gap-3 p-3 md:p-4 bg-surface/50 border border-primary/10">
+                <PlayCircle className="w-4 h-4 md:w-5 md:h-5 text-secondary shrink-0 mt-0.5" />
                 <span>{outcome}</span>
               </div>
             ))}
@@ -202,18 +203,18 @@ const Mentorship = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 relative overflow-hidden border-t border-primary/30 bg-surface/50 text-center">
+      <section className="py-20 md:py-32 relative overflow-hidden border-t border-primary/30 bg-surface/50 text-center">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(176,38,255,0.15),transparent_60%)]"></div>
         <div className="max-w-3xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-            Don’t just learn to code.<br/>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 md:mb-6 text-white leading-tight px-2">
+            Don\'t just learn to code.<br/>
             <span className="text-primary">Learn to think, solve, and build.</span>
           </h2>
-          <p className="text-lg text-textMuted font-mono mb-10 max-w-2xl mx-auto">
-            Join the Coders’ Forum Mentorship Classes and start building the coding foundation that will take you further.
+          <p className="text-sm md:text-lg text-textMuted font-mono mb-6 md:mb-10 max-w-2xl mx-auto px-2">
+            Join the Coders\' Forum Mentorship Classes and start building the coding foundation that will take you further.
           </p>
-          <a href="GOOGLE_FORM_URL_HERE" target="_blank" rel="noopener noreferrer" className="btn-pixel text-lg px-10 py-5">
-            Join the Mentorship Program <ArrowRight className="ml-2 w-5 h-5 inline" />
+          <a href="GOOGLE_FORM_URL_HERE" target="_blank" rel="noopener noreferrer" className="btn-pixel text-sm md:text-lg px-6 md:px-10 py-3 md:py-5">
+            Join the Mentorship Program <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 inline" />
           </a>
         </div>
       </section>
