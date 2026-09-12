@@ -53,7 +53,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 md:mb-8 leading-tight tracking-tighter"
+            className="text-[1.75rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-8xl font-black mb-6 md:mb-8 tracking-tighter"
           >
             <span className="block text-white">IDEAS.</span>
             <span className="block text-secondary">PEOPLE.</span>
@@ -64,7 +64,7 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-sm md:text-lg lg:text-xl text-textMuted max-w-2xl mx-auto mb-8 md:mb-12 font-mono px-2"
+            className="text-xs sm:text-sm md:text-lg lg:text-xl text-textMuted max-w-2xl mx-auto mb-8 md:mb-12 font-mono px-4 sm:px-2 leading-relaxed"
           >
             The premier student coding community at SVCE. We build, learn, and grow together in the digital frontier.
           </motion.p>
@@ -75,7 +75,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6"
           >
-            <Link to="/events" className="btn-pixel w-full sm:w-auto px-8 py-3 text-sm">
+            <Link to="/events" className="btn-pixel w-[85%] sm:w-auto px-4 py-2.5 sm:px-8 sm:py-3 text-[10px] sm:text-sm">
               EXPLORE EVENTS →
             </Link>
           </motion.div>

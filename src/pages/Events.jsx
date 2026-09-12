@@ -3,15 +3,11 @@ import { motion } from 'framer-motion';
 import { Calendar, Search, MapPin, Clock, ArrowRight } from 'lucide-react';
 
 const EVENTS_DATA = [
-  { id: 1, title: 'HackOverflow 4.0', category: 'Hackathons', desc: 'A 24-hour coding marathon to build solutions for a sustainable future.', date: 'OCT 12, 2026', time: '10:00 AM', location: 'Main Lab, SVCE', type: 'upcoming', tags: ['Coding', 'Hackathons'] },
-  { id: 2, title: 'Intro to React & Vite', category: 'Workshops', desc: 'Learn the modern frontend stack from scratch. No prior experience required.', date: 'NOV 05, 2026', time: '02:00 PM', location: 'Lab 2', type: 'upcoming', tags: ['Workshop', 'Coding'] },
-  { id: 3, title: 'Mentorship Induction', category: 'Workshops', desc: 'Kickoff session for the 2nd-year mentorship program.', date: 'DEC 01, 2026', time: '04:00 PM', location: 'Seminar Hall', type: 'upcoming', tags: ['Mentorship', 'Placement Prep'] },
-  { id: 4, title: 'Java & OOP Basics', category: 'Workshops', desc: 'Deep dive into Object-Oriented Programming using Java.', date: 'AUG 15, 2025', time: '09:00 AM', location: 'Lab 1', type: 'past', tags: ['Java', 'Workshop'] },
-  { id: 5, title: 'Graph Algorithms', category: 'Workshops', desc: 'Advanced DSA session focusing on Graph traversal and shortest paths.', date: 'JUL 10, 2025', time: '10:00 AM', location: 'Online', type: 'past', tags: ['DSA', 'Mentorship'] },
-  { id: 6, title: 'Intro to Machine Learning', category: 'Workshops', desc: 'A beginner-friendly session on regression and classification.', date: 'JUN 20, 2025', time: '11:00 AM', location: 'Lab 3', type: 'past', tags: ['Machine Learning', 'Workshop'] },
+  { id: 1, title: 'Coders’ Forum Hackathon', category: 'Hackathons', desc: 'A 24-hour coding marathon to build solutions for a sustainable future.', date: 'To Be Announced', time: 'TBA', location: 'TBA', type: 'upcoming', tags: ['Coding', 'Hackathons'] },
+  { id: 2, title: 'Mini Hackathon', category: 'Hackathons', desc: 'A shorter, intense coding challenge to test your skills and creativity.', date: 'To Be Announced', time: 'TBA', location: 'TBA', type: 'upcoming', tags: ['Hackathons', 'Coding'] },
 ];
 
-const FILTERS = ['All Events', 'Workshops', 'Hackathons'];
+const FILTERS = ['All Events', 'Hackathons'];
 
 const Events = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
